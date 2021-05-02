@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import CartItem from './CartItem'
 
-function CartItems({ cartItems }) {
+function CartItems({ cartItems  }) {
     return (
         <Container>
             <Title>Shopping Cart</Title>
@@ -12,6 +12,7 @@ function CartItems({ cartItems }) {
                     cartItems.map((item)=>(
                         <CartItem 
                             id={item.id}
+                            key = {item.id }   //id={item.id}
                             item={item.product}
                         />
                     ))
